@@ -71,5 +71,6 @@
     "roots": [
       "<rootDir>/apps/"
     ]
-  }
+  },
+  "packageManager": "pnpm@9.3.0"
 }
