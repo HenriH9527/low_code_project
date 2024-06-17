@@ -1,0 +1,7 @@
+{
+  "name": "low-code-test",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "cd .. && pnpm start:lowcode"
+  }
+}

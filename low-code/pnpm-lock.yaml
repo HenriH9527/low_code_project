@@ -23,6 +23,9 @@ importers:
       rxjs:
         specifier: ^7.2.0
         version: 7.8.1
+      turbo:
+        specifier: ^2.0.4
+        version: 2.0.4
     devDependencies:
       '@nestjs/cli':
         specifier: ^9.0.0
@@ -2538,6 +2541,15 @@ packages:
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
+
+  turbo-windows-64@2.0.4:
+    resolution: {integrity: sha512-QOnUR9hKl0T5gq5h1fAhVEqBSjpcBi/BbaO71YGQNgsr6pAnCQdbG8/r3MYXet53efM0KTdOhieWeO3KLNKybA==}
+    cpu: [x64]
+    os: [win32]
+
+  turbo@2.0.4:
+    resolution: {integrity: sha512-Ilme/2Q5kYw0AeRr+aw3s02+WrEYaY7U8vPnqSZU/jaDG/qd6jHVN6nRWyd/9KXvJGYM69vE6JImoGoyNjLwaw==}
+    hasBin: true
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -5637,6 +5649,13 @@ snapshots:
     dependencies:
       tslib: 1.14.1
       typescript: 4.9.5
+
+  turbo-windows-64@2.0.4:
+    optional: true
+
+  turbo@2.0.4:
+    optionalDependencies:
+      turbo-windows-64: 2.0.4
 
   type-check@0.4.0:
     dependencies:
