@@ -7,7 +7,6 @@ import {
   HttpStatus,
   ServiceUnavailableException,
 } from '@nestjs/common';
-import { timeStamp } from 'console';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
