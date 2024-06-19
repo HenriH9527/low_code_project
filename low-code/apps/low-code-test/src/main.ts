@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { UserModule } from './user/user.model';
 import { VersioningType, VERSION_NEUTRAL } from '@nestjs/common';
 import { TransFormInterceptor } from './common/interceptors/transform.interceptor';
 import { AllExceptionsFilter } from './common/exceptions/base.exception.filter';
@@ -9,7 +10,7 @@ import { generateDocument } from './doc';
 declare const module: any;
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(UserModule);
   // 统一响应格式
   app.useGlobalInterceptors(new TransFormInterceptor());
   // 异常过滤器

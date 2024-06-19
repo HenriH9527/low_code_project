@@ -13,7 +13,7 @@ export class AppController {
     private readonly configService: ConfigService,
   ) {}
 
-  @Get('getTestNames')
+  @Get('getTestName')
   getTestName() {
     return this.configService.get('TEST_VALUE').name;
   }
