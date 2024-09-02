@@ -15,7 +15,7 @@ services:
   mysql:
     image: bitnami/mysql:8.0
     environment:
-      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_ROOT_PASSWORD=123456
     volumes:
       - 'mysql_data:/Users/Shared/mysql'
     ports:
