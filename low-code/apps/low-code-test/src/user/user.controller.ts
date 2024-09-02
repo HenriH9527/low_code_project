@@ -13,6 +13,7 @@ export class UserController {
   })
   @Post('/add')
   create(@Body() user: AddUserDto) {
+    console.log('创建用户', user);
     return this.userService.createOrSave(user);
   }
 }

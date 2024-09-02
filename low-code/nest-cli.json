@@ -4,7 +4,7 @@
   "sourceRoot": "apps/low-code-test/src",
   "compilerOptions": {
     "deleteOutDir": true,
-    "webpack": true,
+    "webpack": false,
     "tsConfigPath": "apps/low-code-test/tsconfig.app.json"
   },
   "monorepo": true,

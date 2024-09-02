@@ -5,10 +5,11 @@ import { User } from './user.mongo.entity';
 @Injectable()
 export class UserService {
   constructor(
-    @Inject('USER_REPOSITORY') private userRespository: MongoRepository<User>,
+    @Inject('USER_REPOSITORY')
+    private userRepository: MongoRepository<User>,
   ) {}
 
   createOrSave(user) {
-    return this.userRespository.save(user);
+    return this.userRepository.save(user);
   }
 }

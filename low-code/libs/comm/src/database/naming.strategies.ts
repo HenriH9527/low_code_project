@@ -1,6 +1,6 @@
-/**
- * @Author Henri
- * @Description 添加数据库表与字段驼峰转下划线功能
+/*
+ * @Author: Cookie
+ * @Description: 添加数据库表与字段驼峰转下划线功能
  */
 
 import { DefaultNamingStrategy, NamingStrategyInterface } from 'typeorm';
@@ -10,8 +10,8 @@ export class NamingStrategy
   extends DefaultNamingStrategy
   implements NamingStrategyInterface
 {
-  tableName(targetName: string, userSpecifiedName: string | undefined): string {
-    return userSpecifiedName ? userSpecifiedName : snakeCase(targetName);
+  tableName(className: string, customName: string): string {
+    return customName ? customName : snakeCase(className);
   }
 
   columnName(
@@ -19,9 +19,9 @@ export class NamingStrategy
     customName: string,
     embeddedPrefixes: string[],
   ): string {
-    return snakeCase(
-      embeddedPrefixes.concat('').join('_') +
-        (customName ? customName : snakeCase(propertyName)),
+    return (
+      snakeCase(embeddedPrefixes.concat('').join('_')) +
+      (customName ? customName : snakeCase(propertyName))
     );
   }
 
