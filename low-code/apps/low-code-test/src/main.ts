@@ -10,7 +10,8 @@ import { generateDocument } from './doc';
 declare const module: any;
 
 async function bootstrap() {
-  const app = await NestFactory.create(UserModule);
+  // const app = await NestFactory.create(UserModule);
+  const app = await NestFactory.create(AppModule);
   // 统一响应格式
   app.useGlobalInterceptors(new TransFormInterceptor());
   // 异常过滤器

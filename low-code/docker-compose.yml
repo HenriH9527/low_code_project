@@ -6,7 +6,7 @@ volumes:
 
 services:
   mongo:
-    image: bitnami/mongodb:5.0.8
+    image: mongo:5.0.0-focal
     volumes:
       - 'mongodb_data:/Users/Shared/mongodb'
     ports:

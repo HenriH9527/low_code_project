@@ -4,7 +4,7 @@ import { BuinessException } from '../src/common/exceptions/business.exception';
 import { ConfigService } from '@nestjs/config';
 
 @Controller({
-  path: 'user',
+  path: 'api',
   version: '1',
 })
 export class AppController {
